@@ -38,7 +38,7 @@ function App() {
         {todos.map((list, i) => {
           return <li key={i} className={li}>
             {list}
-            <button onClick={() => remove(i)} type="submit">x</button>
+            <button className={btnRemove} onClick={() => remove(i)} type="submit">x</button>
           </li>
         })}
       </ul>
@@ -55,5 +55,6 @@ const form = 'flex gap-2 mx-auto'
 const inp = 'bg-transparent border-2 p-4 rounded w-60 outline-none hover:border-blue-500'
 const addBtn = 'bg-blue-500 text-sm text-[#fff] rounded font-bold outline-none w-[80px] hover:bg-blue-600'
 
-const ul = 'px-10 mt-10 list-disc grid grid-cols-2 gap-3'
-const li = 'flex gap-2'
+const ul = 'px-10 mt-10 list-disc grid mx-auto  gap-5'
+const li = 'flex gap-2 bg-blue-500 p-3 rounded'
+const btnRemove = 'text-red outline-none font-bold'
